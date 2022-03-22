@@ -12,6 +12,7 @@ require_relative '../lib/webpage'
 
 require_relative '../config/landing_ru'
 require_relative '../config/eva_ru'
+require_relative '../config/alice_ru'
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
