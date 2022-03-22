@@ -9,6 +9,16 @@ RSpec.describe 'https://github.com/wault-pw/eva' do
     end
   end
 
+  describe 'SSH' do
+    subject do
+      Port.new(Eva.url)
+    end
+
+    it 'closed' do
+      expect(subject).to have_closed(22)
+    end
+  end
+
   describe 'meta tags' do
     subject do
       Webpage.new(Eva.url)

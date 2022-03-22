@@ -9,6 +9,16 @@ RSpec.describe 'https://github.com/wault-pw/landing' do
     end
   end
 
+  describe 'SSH' do
+    subject do
+      Port.new(Landing.url)
+    end
+
+    it 'closed' do
+      expect(subject).to have_closed(22)
+    end
+  end
+
   describe 'robots.txt' do
     subject do
       Robots.new("#{Landing.url}/robots.txt")
