@@ -53,8 +53,6 @@ RSpec.describe 'https://github.com/wault-pw/landing' do
       expect(subject).to have_status(404)
       expect(subject).to have_lang(Landing.lang)
       expect(subject).to have_title
-      # TODO: add landing page 404 description
-      # expect(subject).to have_description
     end
   end
 end
