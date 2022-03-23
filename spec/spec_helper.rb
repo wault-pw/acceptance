@@ -12,9 +12,18 @@ require_relative '../lib/robots'
 require_relative '../lib/sitemap'
 require_relative '../lib/webpage'
 
-require_relative '../config/landing_ru'
-require_relative '../config/eva_ru'
-require_relative '../config/alice_ru'
+case ENV['LANG']
+when "ru"
+  require_relative '../config/landing_ru'
+  require_relative '../config/eva_ru'
+  require_relative '../config/alice_ru'
+when "en"
+  require_relative '../config/landing_en'
+  require_relative '../config/eva_en'
+  require_relative '../config/alice_en'
+else
+  raise "lang <#{ENV['LANG']}> not defined, use LANG=code rspec"
+end
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|

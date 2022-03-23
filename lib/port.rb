@@ -13,7 +13,7 @@ class Port
 
   def has_open?(number)
     Socket.tcp(uri.host, number, connect_timeout: 2) { true }
-  rescue Errno::ETIMEDOUT
+  rescue Errno::ETIMEDOUT, Errno::ENETUNREACH
     false
   end
 end

@@ -17,4 +17,8 @@ jobs:
           ruby-version: 3.1
           bundler-cache: true
 
-      - run: bundle exec rspec
+      - name: English specs
+        run: LANG=en bundle exec rspec
+
+      - name: Russian specs
+        run: LANG=ru bundle exec rspec
