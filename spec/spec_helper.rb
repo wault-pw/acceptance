@@ -21,6 +21,10 @@ when "en"
   require_relative '../config/landing_en'
   require_relative '../config/eva_en'
   require_relative '../config/alice_en'
+when "zh"
+  require_relative '../config/landing_zh'
+  require_relative '../config/eva_zh'
+  require_relative '../config/alice_zh'
 else
   raise "lang <#{ENV['LANG']}> not defined, use LANG=code rspec"
 end

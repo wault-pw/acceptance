@@ -20,5 +20,8 @@ jobs:
       - name: English specs
         run: LANG=en bundle exec rspec
 
+      - name: Chinese specs
+        run: LANG=zh bundle exec rspec
+
       - name: Russian specs
         run: LANG=ru bundle exec rspec
